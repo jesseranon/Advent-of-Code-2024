@@ -1,16 +1,6 @@
-import fs from 'fs'
+import {readFile} from '../helperFunctions.js'
 
-export const inputFileString = './day1input.txt'
-
-// split input into lists
-function readFile(filePath) {
-    try {
-        const data = fs.readFileSync(filePath)
-        return data.toString()
-    } catch (error) {
-        console.error(`Got an error trying to read the file: ${error.message}`)
-    }
-}
+export const inputFileString = './day1/day1input.txt'
 
 export function stringToArrays(inputFileString) {
     let textInput = readFile(inputFileString)
